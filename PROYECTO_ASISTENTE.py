@@ -422,11 +422,11 @@ if __name__ == "__main__":
             print("Elegiste la opción TEST.")
             texto_a_audio("Elegiste la opción TEST.")
             print("En esta opción tienes para elegir en dar una prueba de entrada sobre pensamiento computacional, o dar un examen sobre Estructura de Computadores.")
-            texto_a_audio("En esta opción tienes para elegir en dar una prueba de entrada sobre pensamiento computacional, o dar un examen sobre Estructura de Computadores.")
-            print("¿Cuál eliges?")
-            texto_a_audio("¿Cuál eliges?")
-            print("\n 1) Prueba de entrada - Pensamiento Computacional\n 2) Examen - Estructura de computadores\n")
-            texto_a_audio("¿Prueba de entrada Pensamiento Computacional? o ¿Examen - Estructura de computadores?")
+            #texto_a_audio("En esta opción tienes para elegir en dar una prueba de entrada sobre pensamiento computacional, o dar un examen sobre Estructura de Computadores.")
+            #print("¿Cuál eliges?")
+            #texto_a_audio("¿Cuál eliges?")
+            #print("\n 1) Prueba de entrada - Pensamiento Computacional\n 2) Examen - Estructura de computadores\n")
+            #texto_a_audio("¿Prueba de entrada Pensamiento Computacional? o ¿Examen - Estructura de computadores?")
             
             while(not salir):
                 print("¿Por cual deseas empezar?")
@@ -579,6 +579,8 @@ if __name__ == "__main__":
                                 respuesta = enviar_voz()
 
                                 respuesta_correcta = pregunta_info['respuesta_correcta']
+
+                                print(respuesta)
 
                                 if validar_respuesta(respuesta, respuesta_correcta):
                                     print("¡Respuesta correcta!")
