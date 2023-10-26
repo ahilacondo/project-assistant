@@ -46,24 +46,28 @@
         },
         {
             "pregunta": "Cual es la tension electrica asociada a un valor logico '1' en un sistema binario?",
-            "opciones": ["3.3 voltios", "0 voltios", "5 voltios"],
-            "respuesta_correcta": "b"
+            "opciones": [
+                "a) 3.3 voltios",
+                "b) 0 voltios",
+                "c) 5 voltios"
+            ],
+            "respuesta_correcta": "a"
         },
         {
             "pregunta": "Por que es esencial la naturaleza jerarquica en sistemas complejos?",
             "opciones": [
-                "Facilita la comunicacion con el mundo exterior",
-                "Simplifica la organizacion de los componentes",
-                "Permite abordar un nivel del sistema a la vez"
+                "a) Facilita la comunicacion con el mundo exterior",
+                "b) Simplifica la organizacion de los componentes",
+                "c) Permite abordar un nivel del sistema a la vez"
             ],
             "respuesta_correcta": "b"
         },
         {
             "pregunta": "Cual es el proposito de una caracterizacion abstracta y simplificada en un sistema jerarquico?",
             "opciones": [
-                "Describir el sistema en detalle",
-                "Representar el sistema en el nivel inferior",
-                "Facilitar la interaccion entre componentes"
+                "a) Describir el sistema en detalle",
+                "b) Representar el sistema en el nivel inferior",
+                "c) Facilitar la interaccion entre componentes"
             ],
             "respuesta_correcta": "c"
         },
@@ -71,8 +75,8 @@
             "pregunta": "Cual es la diferencia principal entre las aproximaciones 'bottom-up' (desde abajo hacia arriba) y 'top-down' (desde arriba hacia abajo) para describir sistemas jerarquicos?",
             "opciones": [
                 "a) La aproximacion 'bottom-up' comienza desde el nivel mas alto y desciende gradualmente",
-                "b) 'Bottom-up' se enfoca en la descripcion de sistemas a nivel de componentes fisicos.",
-                "c) Ambas aproximaciones son identicas y se utilizan en la descripcion de sistemas jerarquicos."
+                "b) 'Bottom-up' se enfoca en la descripcion de sistemas a nivel de componentes fisicos",
+                "c) Ambas aproximaciones son identicas y se utilizan en la descripcion de sistemas jerarquicos"
             ],
             "respuesta_correcta": "b"
         },
@@ -80,225 +84,297 @@
             "pregunta": "Que tecnologia se utiliza en el nivel electronico para la construccion de circuitos integrados (CIs)?",
             "opciones": [
                 "a) En el nivel electronico se utiliza la tecnologia de impresion 3D",
-                "b) La tecnologia de muy alta escala de integracion (VLSI) se utiliza en el nivel electronico.",
-                "c) En el nivel electronico se utilizan materiales organicos."
+                "b) La tecnologia de muy alta escala de integracion (VLSI) se utiliza en el nivel electronico",
+                "c) En el nivel electronico se utilizan materiales organicos"
             ],
             "respuesta_correcta": "b"
         },
         {
             "pregunta": "En el nivel digital, como se describe el estado de los sistemas y cuales son los elementos principales utilizados en este nivel?",
             "opciones": [
-                "a) El estado de los sistemas se describe utilizando lenguaje natural.",
-                "b) El estado de los sistemas se describe mediante unos y ceros (informacion binaria).",
-                "c) El estado de los sistemas se describe en base a colores y formas."
+                "a) El estado de los sistemas se describe utilizando lenguaje natural",
+                "b) El estado de los sistemas se describe mediante unos y ceros (informacion binaria)",
+                "c) El estado de los sistemas se describe en base a colores y formas"
             ],
             "respuesta_correcta": "b"
         },
         {
             "pregunta": "Que nivel de abstraccion se prefiere para describir computadoras en el texto?",
             "opciones": [
-                "a) El nivel de abstraccion preferido es el nivel de componente.",
-                "b) El nivel de abstraccion preferido es el nivel PMS.",
-                "c) El nivel de abstraccion preferido es el nivel RTL (Nivel de Transferencia de Registros)."
+                "a) El nivel de abstraccion preferido es el nivel de componente",
+                "b) El nivel de abstraccion preferido es el nivel PMS",
+                "c) El nivel de abstraccion preferido es el nivel RTL (Nivel de Transferencia de Registros)"
             ],
-            "respuesta_correcta": "a"
+            "respuesta_correcta": "c"
         },
         {
             "pregunta": "Que significa la sigla PMS en el contexto del nivel mas alto de la jerarquia de descripcion de computadoras?",
             "opciones": [
-                "a) PMS significa 'Pantalla, Mouse, Teclado'.",
-                "b) PMS significa 'Processor Memory Switch' (Procesador, Memoria, Conmutador).",
-                "c) PMS significa 'Programa de Manejo de Sistemas'."
+                "a) PMS significa 'Pantalla, Mouse, Teclado'",
+                "b) PMS significa 'Processor Memory Switch' (Procesador, Memoria, Conmutador)",
+                "c) PMS significa 'Programa de Manejo de Sistemas'"
             ],
             "respuesta_correcta": "b"
         },
         {
-            "pregunta": "Cual es la funcion de la Unidad Central de Proceso (CPU) en un sistema de computacion?",
+            "pregunta": "Cuál es la función de la Unidad Central de Proceso (CPU) en un sistema de computación?",
             "opciones": [
-                "Controlar el flujo de datos y procesarlos",
-                "Almacenamiento de datos",
-                "Transferencia de datos entre el entorno exterior y el computador"
+                "a) Controlar el flujo de datos y procesarlos",
+                "b) Almacenamiento de datos",
+                "c) Transferencia de datos entre el entorno exterior y el computador"
             ],
             "respuesta_correcta": "a"
         },
         {
-            "pregunta": "Cual es la funcion principal de la memoria en un sistema de computacion?",
+            "pregunta": "Cuál es la función principal de la memoria en un sistema de computación?",
             "opciones": [
-                "Almacenamiento de datos e instrucciones de programa",
-                "Procesamiento de datos",
-                "Control del flujo de datos y procesamiento"
+                "a) Almacenamiento de datos e instrucciones de programa",
+                "b) Procesamiento de datos",
+                "c) Control del flujo de datos y procesamiento"
             ],
             "respuesta_correcta": "a"
         },
         {
-            "pregunta": "Cual es el papel del Sistema de interconexion (Buses) en un computador segun el modelo Von Neumann?",
+            "pregunta": "Cuál es el papel del Sistema de interconexión (Buses) en un computador según el modelo Von Neumann?",
             "opciones": [
-                "Facilitar el flujo de datos entre la CPU, la memoria y los modulos de E/S",
-                "Almacenar datos de forma temporal",
-                "Controlar el flujo de datos y procesarlos"
+                "a) Facilitar el flujo de datos entre la CPU, la memoria y los módulos de E/S",
+                "b) Almacenar datos de forma temporal",
+                "c) Controlar el flujo de datos y procesarlos"
             ],
             "respuesta_correcta": "a"
         },
         {
-            "pregunta": "Cuales son las tres funciones principales que debe realizar un sistema de computacion?",
+            "pregunta": "Cuáles son las tres funciones principales que debe realizar un sistema de computación?",
             "opciones": [
-                "Procesamiento de datos, Almacenamiento de datos, Transferencia de datos",
-                "Entrada de datos, Procesamiento de datos, Salida de datos",
-                "Control de datos, Almacenamiento de datos, Transferencia de datos"
+                "a) Procesamiento de datos, Almacenamiento de datos, Transferencia de datos",
+                "b) Entrada de datos, Procesamiento de datos, Salida de datos",
+                "c) Control de datos, Almacenamiento de datos, Transferencia de datos"
             ],
             "respuesta_correcta": "a"
         },
         {
-            "pregunta": "Que es la unidad central de procesamiento (CPU)?",
+            "pregunta": "Qué es la unidad central de procesamiento (CPU)?",
             "opciones": [
-                "El componente de hardware central de una computadora.",
-                "Responsable de solo interpretar las instrucciones de los programas informaticos.",
-                "Ninguna de las anteriores."
+                "a) El componente de hardware central de una computadora",
+                "b) Responsable de solo interpretar las instrucciones de los programas informaticos",
+                "c) Ninguna de las anteriores"
             ],
             "respuesta_correcta": "a"
         },
         {
-            "pregunta": "Cual es una parte principal de la CPU?",
+            "pregunta": "Cuál es una parte principal de la CPU?",
             "opciones": [
-                "La unidad de contencion(UC).",
-                "La unidad aritmetico-logica (ALU).",
-                "Los registros externos."
+                "a) La unidad de contencion(UC)",
+                "b) La unidad aritmetico-logica (ALU)",
+                "c) Los registros externos"
             ],
             "respuesta_correcta": "b"
         },
         {
-            "pregunta": "Cual es la funcion de la unidad de control?",
+            "pregunta": "Cuál es la función de la unidad de control?",
             "opciones": [
-                "Interpretar las instrucciones de los programas.",
-                "Coordinar las operaciones de la memoria RAM.",
-                "Ninguna de las anteriores."
+                "a) Interpretar las instrucciones de los programas",
+                "b) Coordinar las operaciones de la memoria RAM",
+                "c) Ninguna de las anteriores"
             ],
             "respuesta_correcta": "a"
         },
         {
-            "pregunta": "Cual es la funcion de la unidad aritmetico-logica (ALU)?",
+            "pregunta": "Cuál es la función de la unidad aritmetico-logica (ALU)?",
             "opciones": [
-                "Realizar operaciones matematicas y logicas.",
-                "Interpretar instrucciones de programas.",
-                "Genera senales necesarias para que el CPU analice las instrucciones."
+                "a) Realizar operaciones matematicas y logicas",
+                "b) Interpretar instrucciones de programas",
+                "c) Genera senales necesarias para que el CPU analice las instrucciones"
             ],
             "respuesta_correcta": "a"
         },
         {
-            "pregunta": "Cuales son los registros internos principales de la CPU?",
+            "pregunta": "Cuáles son los registros internos principales de la CPU?",
             "opciones": [
-                "Comparador de programas.",
-                "Registro de Instruccion.",
-                "Registros de Estado del CPU."
+                "a) Comparador de programas",
+                "b) Registro de Instruccion",
+                "c) Registros de Estado del CPU"
             ],
             "respuesta_correcta": "b"
         },
         {
-            "pregunta": "En que formato se almacenan las instrucciones y los datos en la memoria?",
-            "opciones": ["En formato ASCII.", "En formato binario.", "En formato decimal."],
-            "respuesta_correcta": "b"
-        },
-        {
-            "pregunta": "Cual es el proposito del diseno jerarquico de memoria?",
+            "pregunta": "En qué formato se almacenan las instrucciones y los datos en la memoria?",
             "opciones": [
-                "Reducir los costos de almacenamiento al utilizar una sola capa de memoria para todos los datos.",
-                "Minimizar la latencia y optimizar el rendimiento al organizar diferentes niveles de memoria con la mas rapida cerca de la CPU.",
-                "Se concede un acceso directo al CPU, dejando la memoria mas lenta en las capas mas internas para una mayor eficiencia."
+                "a) En formato ASCII",
+                "b) En formato binario",
+                "c) En formato decimal"
             ],
             "respuesta_correcta": "b"
         },
         {
-            "pregunta": "Cual es el proposito principal de la volatilidad de una memoria?",
+            "pregunta": "Cuál es el proposito del diseño jerarquico de memoria?",
             "opciones": [
-                "Para almacenar informacion critica.",
-                "Acelerar el tiempo de acceso a la main memory.",
-                "Preservar datos e instrucciones despues de un corte de energia."
+                "a) Reducir los costos de almacenamiento al utilizar una sola capa de memoria para todos los datos",
+                "b) Minimizar la latencia y optimizar el rendimiento al organizar diferentes niveles de memoria con la mas rapida cerca de la CPU",
+                "c) Se concede un acceso directo al CPU, dejando la memoria mas lenta en las capas mas internas para una mayor eficiencia"
+            ],
+            "respuesta_correcta": "b"
+        },
+        {
+            "pregunta": "Cuál es el proposito principal de la volatilidad de una memoria?",
+            "opciones": [
+                "a) Para almacenar informacion critica",
+                "b) Acelerar el tiempo de acceso a la main memory",
+                "c) Preservar datos e instrucciones despues de un corte de energia"
             ],
             "respuesta_correcta": "a"
         },
         {
-            "pregunta": "Que relacion existe entre el tiempo de acceso y el precio por bit en las tecnologias de almacenamiento?",
-            "opciones": ["Son independientes.", "Son directamente proporcionales.", "Son inversamente proporcionales."],
+            "pregunta": "Qué relacion existe entre el tiempo de acceso y el precio por bit en las tecnologias de almacenamiento?",
+            "opciones": [
+                "a) Son independientes",
+                "b) Son directamente proporcionales",
+                "c) Son inversamente proporcionales"
+            ],
+            "respuesta_correcta": "b"
+        },
+        {
+            "pregunta": "Por qué los computadores no pueden tener toda la memoria implementada con el dispositivo mas rapido existente?",
+            "opciones": [
+                "a) Debido a restricciones de costo y rendimiento",
+                "b) Limitaciones en el acceso de la memoria principal",
+                "c) Limitaciones del CPU"
+            ],
+            "respuesta_correcta": "a"
+        },
+        {
+            "pregunta": "Por qué no se pueden conectar directamente los dispositivos perifericos a la CPU?",
+            "opciones": [
+                "a) Diversidad en tecnologia y funcionamiento",
+                "b) Ahorro de espacio",
+                "c) Mayor velocidad de transferencia"
+            ],
+            "respuesta_correcta": "a"
+        },
+        {
+            "pregunta": "Qué es el objetivo principal de las transferencias de entrada/salida?",
+            "opciones": [
+                "a) Mover datos entre la CPU y la memoria",
+                "b) Mover datos entre los perifericos y la memoria",
+                "c) Mover datos entre la CPU y los dispositivos de almacenamiento"
+            ],
+            "respuesta_correcta": "b"
+        },
+        {
+            "pregunta": "Qué funcion tienen los modulos de WS en relacion con los dispositivos perifericos?",
+            "opciones": [
+                "a) Almacenar datos temporales",
+                "b) Facilitar la comunicacion entre la CPU y los perifericos",
+                "c) Realizar operaciones aritmeticas"
+            ],
+            "respuesta_correcta": "b"
+        },
+        {
+            "pregunta": "Por qué cada control de periferico tiene una direccion unica en el sistema?",
+            "opciones": [
+                "a) Para confundir a la CPU",
+                "b) Para ahorrar espacio en memoria",
+                "c) Para permitir que la interfaz de WS detecte cuando se dirige a el"
+            ],
             "respuesta_correcta": "c"
         },
         {
-            "pregunta": "Por que los computadores no pueden tener toda la memoria implementada con el dispositivo mas rapido existente?",
-            "opciones": ["Debido a restricciones de costo y rendimiento.", "Limitaciones en el acceso de la memoria principal.", "Limitaciones del CPU."],
-            "respuesta_correcta": "a"
-        },
-        {
-            "pregunta": "Por que no se pueden conectar directamente los dispositivos perifericos a la CPU?",
-            "opciones": ["Diversidad en tecnologia y funcionamiento", "Ahorro de espacio", "Mayor velocidad de transferencia"],
-            "respuesta_correcta": "a"
-        },
-        {
-            "pregunta": "Cual es el objetivo principal de las transferencias de entrada/salida?",
-            "opciones": ["Mover datos entre la CPU y la memoria", "Mover datos entre los perifericos y la memoria", "Mover datos entre la CPU y los dispositivos de almacenamiento"],
+            "pregunta": "Qué factores influyen en el diseño de la interfaz de entrada/salida?",
+            "opciones": [
+                "a) El conjunto de instrucciones de la CPU",
+                "b) La velocidad de los perifericos",
+                "c) El color de la computadora"
+            ],
             "respuesta_correcta": "b"
         },
         {
-            "pregunta": "Que funcion tienen los modulos de WS en relacion con los dispositivos perifericos?",
-            "opciones": ["Almacenar datos temporales", "Facilitar la comunicacion entre la CPU y los perifericos", "Realizar operaciones aritmeticas"],
-            "respuesta_correcta": "b"
-        },
-        {
-            "pregunta": "Por que cada control de periferico tiene una direccion unica en el sistema?",
-            "opciones": ["Para confundir a la CPU", "Para ahorrar espacio en memoria", "Para permitir que la interfaz de WS detecte cuando se dirige a el"],
-            "respuesta_correcta": "c"
-        },
-        {
-            "pregunta": "Que factores influyen en el diseno de la interfaz de entrada/salida?",
-            "opciones": ["El conjunto de instrucciones de la CPU", "La velocidad de los perifericos", "El color de la computadora"],
-            "respuesta_correcta": "b"
-        },
-        {
-            "pregunta": "Que es un bus de datos?",
-            "opciones": ["Un enlace de comunicacion compartido que usa multiples cables.", "Un dispositivo para almacenar datos.", "Un dispositivo que agrupa senales."],
+            "pregunta": "Qué es un bus de datos?",
+            "opciones": [
+                "a) Un enlace de comunicacion compartido que usa multiples cables",
+                "b) Un dispositivo para almacenar datos",
+                "c) Un dispositivo que agrupa senales"
+            ],
             "respuesta_correcta": "a"
         },
         {
             "pregunta": "Para que se utiliza el bus de direcciones?",
-            "opciones": ["Para transmitir datos entre dispositivos.", "Para indicar la ubicacion de los datos que se desean acceder.", "Para seleccionar el tipo de transaccion de bus."],
+            "opciones": [
+                "a) Para transmitir datos entre dispositivos",
+                "b) Para indicar la ubicacion de los datos que se desean acceder",
+                "c) Para seleccionar el tipo de transaccion de bus"
+            ],
             "respuesta_correcta": "b"
         },
         {
             "pregunta": "Cual es la funcion del bus de control?",
-            "opciones": ["Transmitir datos entre la CPU y la memoria.", "Seleccionar el emisor y receptor en una transaccion de bus.", "Alimentar los dispositivos conectados al bus."],
-            "respuesta_correcta": "b"
+            "opciones": [
+                "a) Transmitir datos entre la CPU y la memoria",
+                "b) Seleccionar el emisor y receptor en una transaccion de bus",
+                "c) Alimentar los dispositivos conectados al bus"
+            ],
+            "respuesta_correcta": "a"
         },
         {
             "pregunta": "Que provoca una contencion de bus?",
-            "opciones": ["La transmision simultanea de senales por varios dispositivos.", "La desconexion de los dispositivos del bus.", "El aumento de la velocidad del bus."],
+            "opciones": [
+                "a) La transmision simultanea de senales por varios dispositivos",
+                "b) La desconexion de los dispositivos del bus",
+                "c) El aumento de la velocidad del bus"
+            ],
             "respuesta_correcta": "a"
         },
         {
             "pregunta": "Que representa una senal electrica en un bus de datos?",
-            "opciones": ["Un '1' o un '0' binario.", "Una letra o numero en codigo hexadecimal.", "Una instruccion de control."],
+            "opciones": [
+                "a) Un '1' o un '0' binario",
+                "b) Una letra o numero en codigo hexadecimal",
+                "c) Una instruccion de control"
+            ],
             "respuesta_correcta": "a"
         },
         {
             "pregunta": "Que son los perifericos en el contexto de una computadora?",
-            "opciones": ["Componentes esenciales de la CPU.", "Dispositivos que no son necesarios para la computadora.", "Elementos fundamentales para el almacenamiento de datos."],
+            "opciones": [
+                "a) Componentes esenciales de la CPU",
+                "b) Dispositivos que no son necesarios para la computadora",
+                "c) Elementos fundamentales para el almacenamiento de datos"
+            ],
             "respuesta_correcta": "c"
         },
         {
             "pregunta": "Como se conectan los perifericos a una computadora?",
-            "opciones": ["A traves de un puerto USB.", "Usando el mismo bus que conecta la CPU con la memoria.", "Mediante un bus especial, el enlace de WS."],
+            "opciones": [
+                "a) A traves de un puerto USB",
+                "b) Usando el mismo bus que conecta la CPU con la memoria",
+                "c) Mediante un bus especial, el enlace de WS"
+            ],
             "respuesta_correcta": "b"
         },
         {
             "pregunta": "Por que los buses utilizados para conectar perifericos son diferentes de los que conectan el procesador con la memoria?",
-            "opciones": ["Para mejorar el rendimiento de la CPU.", "Porque los perifericos no requieren un bus de conexion.", "Debido a las diferencias de rendimiento entre perifericos y CPU."],
+            "opciones": [
+                "a) Para mejorar el rendimiento de la CPU",
+                "b) Porque los perifericos no requieren un bus de conexion",
+                "c) Debido a las diferencias de rendimiento entre perifericos y CPU"
+            ],
             "respuesta_correcta": "c"
         },
         {
-            "pregunta": "Que ejemplos de perifericos de entrada de datos se mencionan en el texto?",
-            "opciones": ["Impresoras y monitores.", "Ratones y teclados.", "Cintas magneticas y discos duros."],
+            "pregunta": "Qué ejemplos de perifericos de entrada de datos se mencionan en el texto?",
+            "opciones": [
+                "a) Impresoras y monitores",
+                "b) Ratones y teclados",
+                "c) Cintas magneticas y discos duros"
+            ],
             "respuesta_correcta": "b"
         },
         {
-            "pregunta": "Que categorias de dispositivos perifericos son esenciales para la interaccion del usuario con una computadora?",
-            "opciones": ["Dispositivos de almacenamiento masivo.", "Impresoras laser y plotters.", "Terminales de video y tarjetas graficas."],
+            "pregunta": "Qué categorias de dispositivos perifericos son esenciales para la interaccion del usuario con una computadora?",
+            "opciones": [
+                "a) Dispositivos de almacenamiento masivo",
+                "b) Impresoras laser y plotters",
+                "c) Terminales de video y tarjetas graficas"
+            ],
             "respuesta_correcta": "c"
         }
     ]
