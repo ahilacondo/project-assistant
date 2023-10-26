@@ -55,12 +55,35 @@ def enviar_voz():
     return palabra["mensaje"].lower()
 
 #BASE DE DATOS DONDE SE ENCUENTRA TODA LA INFORMACION CONCERNIENTE
-
 with open('basedatos.json', 'r') as archivo:
     datos = json.load(archivo)
 
-#Acceder a la parte especifica que se desea imprimir
+#PREGUNTA SI QUIERE CONTINUAR
+def manejar_continuacion():
+    print("¿Quieres seguir aprendiendo?")
+    texto_a_audio("¿Quieres seguir aprendiendo?")
+    time.sleep(0.5)
+    print("Responde con:\n1) Está bien\n2) No gracias")
 
+    respuesta = enviar_voz()
+    print("Tu respuesta " + respuesta)
+
+    if respuesta == "está bien":
+        # ELEGIMOS CON QUÉ OPCIÓN SEGUIR
+        print("Elige la opción que desees aprender: ")
+        texto_a_audio("Elige la opción que desees aprender: ")
+        print("\n1) Aprendizaje\n2) Test\n3) Juegos\n")
+    elif respuesta == "no gracias":
+        print("Oh. es una lástima. En ese caso nos veremos en otra ocasión.")
+        texto_a_audio("Oh. es una lástima. En ese caso nos veremos en otra ocasión.")
+        time.sleep(0.5)
+        print("Espero que hayas aprendido mucho sobre este tema. Hasta luego.")
+        texto_a_audio("Espero que hayas aprendido mucho sobre este tema. Hasta luego.")
+        exit(0)
+    else:
+        print(nombre + " creo que no has respondido con alguna de las instrucciones indicadas anteriormente")
+        texto_a_audio(nombre + " creo que no has respondido con alguna de las instrucciones indicadas anteriormente")
+        print("Responde con:\n1) Está bien\n2) No gracias")
 
 #INICIO
 if __name__ == "__main__":
@@ -134,11 +157,11 @@ if __name__ == "__main__":
 
             if __name__ == "__main__":
                 main()
-
+                
             texto_a_audio(datos['aprendizaje'])
             
             try:
-                img = Image.open("arquitectura.png")
+                img = Image.open("arquitectura.PNG")
             except:
                 print("No se pudo cargar la imagen.")
                 sys.exit(1)
@@ -398,8 +421,8 @@ if __name__ == "__main__":
         elif respuesta == "test":
             print("Elegiste la opción TEST.")
             texto_a_audio("Elegiste la opción TEST.")
-            print("En esta opción tienes para elegir en dar una prueba de entrada sobre PENSAMIENTO COMPUTACIONAL, o dar un examen sobre Estructura de Computadores.")
-            texto_a_audio("En esta opción tienes para elegir en dar una prueba de entrada sobre PENSAMIENTO COMPUTACIONAL, o dar un examen sobre Estructura de Computadores.")
+            print("En esta opción tienes para elegir en dar una prueba de entrada sobre pensamiento computacional, o dar un examen sobre Estructura de Computadores.")
+            texto_a_audio("En esta opción tienes para elegir en dar una prueba de entrada sobre pensamiento computacional, o dar un examen sobre Estructura de Computadores.")
             print("¿Cuál eliges?")
             texto_a_audio("¿Cuál eliges?")
             print("\n 1) Prueba de entrada - Pensamiento Computacional\n 2) Examen - Estructura de computadores\n")
@@ -522,6 +545,47 @@ if __name__ == "__main__":
                             print(nombre + " creo que no has respondido con alguna de las instrucciones indicadas anteriormente")
                             texto_a_audio(nombre + " creo que no has respondido con alguna de las instrucciones indicadas anteriormente")
                             print("Responde con:\n1) Esta bien.\n2) No gracias")  
+
+                    elif respuesta == "examen":
+                        print("Tu respuesta " + respuesta)
+
+                        #PREGUNTAS EXTRAS AÑADIDAS POR EL GRUPO 1 TOY CANSAO JEFE
+                        def realizar_examen():
+                            print("Escogiste: Examen - Estructura de computadores")
+                            texto_a_audio("Empezemos con el examen:")
+
+                            # Cargar preguntas y respuestas del JSON
+                            examen = datos["preguntas"]
+
+                            # Inicializar puntaje
+                            puntaje = 0
+
+                            for pregunta_num, pregunta_info in enumerate(examen, start=1):
+                                print("------------------------------------------------------------------------------------")
+                                print(f"PREGUNTA {pregunta_num}: {pregunta_info['pregunta']}")
+                                texto_a_audio(f"PREGUNTA {pregunta_num}: {pregunta_info['pregunta']}")
+                                
+                                for opcion in pregunta_info['opciones']:
+                                    print(opcion)
+                                    texto_a_audio(opcion)
+                                
+                                print("¿Cuál es tu respuesta?")
+                                texto_a_audio("¿Cuál es tu respuesta?")
+                                respuesta = enviar_voz()
+
+                                if respuesta == pregunta_info['respuesta_correcta']:
+                                    print("¡Respuesta correcta!")
+                                    texto_a_audio("¡Respuesta correcta!")
+                                    puntaje += 1
+                                else:
+                                    print("Respuesta incorrecta.")
+                                    print('La opción correcta es: ' + pregunta_info['respuesta_correcta'])
+                                    texto_a_audio("Respuesta incorrecta.")
+                            
+                            print(f"Tu puntaje en el examen es: {puntaje} de {len(examen)} preguntas.")
+
+                        realizar_examen()
+                        manejar_continuacion()       
 
         elif respuesta == "juegos":
             

@@ -32,9 +32,17 @@
     "PE PREGUNTA 02": ["SEGUNDA PREGUNTA: 2. El primer paso del pensamiento computacional es: identificar el problema.",
                        "¿VERDADERO? o ¿FALSO?"],
     "PE PREGUNTA 03": ["TERCERA PREGUNTA: ¿Qué es un algoritmo en terminos de pensamiento computacional?",
-                       "1) Un patron de diseño visual 2) Un lenguaje de programacion 3) Una secuencia de pasos para resolver un problema 4) Una representacion grafica de datos"]
+                       "1) Un patron de diseño visual 2) Un lenguaje de programacion 3) Una secuencia de pasos para resolver un problema 4) Una representacion grafica de datos"],
+    "preguntas": [
+        {
+            "pregunta": " ¿Que tipo de informacion procesa un computador de forma binaria?",
+            "opciones": ["a) Informacion metrica decimal", "b) Informacion en digitos logicos '1' y '0'", "c) Informacion en digitos del 0 al 9"],
+            "respuesta_correcta": "b"
+        },
+        {
+            "pregunta": " ¿Que componente del computador está formado por millones de transistores y opera a frecuencias de cientos de MHz?",
+            "opciones": ["a) Memoria RAM", "b) Disco duro", "c) Unidad de procesamiento central"],
+            "respuesta_correcta": "c"
+        }
+    ]
 }
-
-
-
-
