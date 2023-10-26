@@ -1,12 +1,15 @@
 {
-    "bienvenida": ["a"],
+    "bienvenida": ["Hola. Soy tu Asistente Virtual. Fui creada para instruirte todo respecto a la Estructura de un computador. Antes de empezar ¿Podrias decirme tu nombre?"],
     
     "aprendizaje": ["Un computador es un sistema secuencial sincrono complejo que procesa informacion. La informacion dentro del ordenador se trata de forma binaria, utilizando solamente los digitos o valores logicos uno y cero, al contrario que el sistema metrico decimal habitual formado por digitos del cero al nueve.", 
                      "Para empezar a describir la estructura basica de un computador, cabe definir las funciones que se espera que pueda realizar una maquina denominada como tal. En terminos generales un computador tiene que realizar tres funciones: ",
                      "Procesamiento de datos. Almacenamiento de datos. Transferencia de datos",
                      "El computador debe procesar datos, transformando la informacion recibida. Asi mismo debe almacenar datos. tanto resultados de computaciones intermedias, como el resultado final de estas. De la misma manera el computador debe realizar transferencia de datos entre su entorno y el mismo. Para realizar estas tres funciones es necesario un mecanismo de control que gobierne el flujo de datos entre los diversos modulos."],
     
-    
+    "arquitectura clasica de una computador": ["segun el Modelo Von Neumann, implica que la Unidad Central de Proceso (CPU) tiene la funcion principal de controlar el flujo de datos, procesarlos y gobernar el sistema.",
+                                               "Por otro lado, la memoria se encarga de almacenar tanto datos como instrucciones de programa.",
+                                               "El Sistema de Interconexion (Buses) juega un papel crucial al facilitar el flujo de datos entre la CPU, la memoria y los modulos de Entrada/Salida (E/S)",
+                                               "En cuanto a las tres funciones principales de un sistema de computacion, estas son el procesamiento de datos, el almacenamiento de datos e instrucciones, y la transferencia de datos, lo que permite un funcionamiento eficiente y efectivo del sistema."],
     "unidad central de proceso": ["La unidad central de proceso controla el funcionamiento de todos los elementos del computador. Controla el flujo de datos, los procesa, y gobierna el secuenciamiento y las acciones en todo el sistema.",
                                   "Una CPU básica consta principalmente de las siguientes unidades","Unidad de Control UC. Unidad Aritmetico Logica ALU. Registros internos",
                                   "La UNIDAD DE CONTROL UC, se encarga de leer de la memoria las instrucciones que se debe ejecutar y de secuenciar el acceso a los datos y las operaciones a realizar por la unidad de proceso. Se encarga de acceder a memoria habilitando un camino de datos para que las instrucciones y los datos lleguen a la CPU.",
