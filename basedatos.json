@@ -1,5 +1,5 @@
 {
-    "bienvenida": ["Hola. Soy tu Asistente Virtual. Fui creada para instruirte todo respecto a la Estructura de un computador. Antes de empezar ¿Podrias decirme tu nombre?"],
+    "bienvenida": ["a"],
     
     "aprendizaje": ["Un computador es un sistema secuencial sincrono complejo que procesa informacion. La informacion dentro del ordenador se trata de forma binaria, utilizando solamente los digitos o valores logicos uno y cero, al contrario que el sistema metrico decimal habitual formado por digitos del cero al nueve.", 
                      "Para empezar a describir la estructura basica de un computador, cabe definir las funciones que se espera que pueda realizar una maquina denominada como tal. En terminos generales un computador tiene que realizar tres funciones: ",
@@ -35,12 +35,12 @@
                        "1) Un patron de diseño visual 2) Un lenguaje de programacion 3) Una secuencia de pasos para resolver un problema 4) Una representacion grafica de datos"],
     "preguntas": [
         {
-            "pregunta": " ¿Que tipo de informacion procesa un computador de forma binaria?",
-            "opciones": ["a) Informacion metrica decimal", "b) Informacion en digitos logicos '1' y '0'", "c) Informacion en digitos del 0 al 9"],
+            "pregunta": "Que tipo de informacion procesa un computador de forma binaria?",
+            "opciones": ["a) Informacion metrica decimal", "b) Informacion en digitos logicos 1 y 0", "c) Informacion en digitos del 0 al 9"],
             "respuesta_correcta": "b"
         },
         {
-            "pregunta": " ¿Que componente del computador está formado por millones de transistores y opera a frecuencias de cientos de MHz?",
+            "pregunta": "Que componente del computador esta formado por millones de transistores y opera a frecuencias de cientos de MHz?",
             "opciones": ["a) Memoria RAM", "b) Disco duro", "c) Unidad de procesamiento central"],
             "respuesta_correcta": "c"
         }

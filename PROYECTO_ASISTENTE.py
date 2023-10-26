@@ -97,15 +97,15 @@ if __name__ == "__main__":
     texto_a_audio(datos['bienvenida'])
     print("Di tu nombre: ")
     #LA FUNCION 'enviar_voz' RETORNA UNA CADENA DE TEXTO DEL AUDIO ENVIADO POR VOZ DEL USUARIO
-    nombre = enviar_voz()
-    print("Hola {}. Mucho gusto.".format(nombre))
-    texto_a_audio("Hola {}. Mucho gusto.".format(nombre))
-    print("{} Ahora voy a explicarte sobre las opciones que tiene este programa. Tienes 3 opciones para escoger.".format(nombre))
-    texto_a_audio("{} Ahora voy a explicarte sobre las opciones que tiene este programa. Tienes 3 opciones para escoger.".format(nombre))
-    print("\n 1) Aprendizaje\n 2) Tests\n 3) Juegos\n")
-    texto_a_audio("Aprendizaje. Tests. Juegos.")
-    print("La opción Aprendizaje es donde podrás aprender todo con respecto a la Estructura de un computador. La opción Tests es donde podrás poner en práctica lo que aprendiste mediante exámenes. Y por último, la tercer opción, es Juegos, donde tambien podrás demostrar lo que aprendiste jugando.")
-    texto_a_audio("La opción Aprendizaje es donde podrás aprender todo con respecto a la Estructura de un computador. La opción Tests es donde podrás poner en práctica lo que aprendiste mediante exámenes. Y por último, la tercer opción, es Juegos, donde tambien podrás demostrar lo que aprendiste jugando.")
+    #nombre = enviar_voz()
+    #print("Hola {}. Mucho gusto.".format(nombre))
+    #texto_a_audio("Hola {}. Mucho gusto.".format(nombre))
+    #print("{} Ahora voy a explicarte sobre las opciones que tiene este programa. Tienes 3 opciones para escoger.".format(nombre))
+    #texto_a_audio("{} Ahora voy a explicarte sobre las opciones que tiene este programa. Tienes 3 opciones para escoger.".format(nombre))
+    #print("\n 1) Aprendizaje\n 2) Tests\n 3) Juegos\n")
+    #texto_a_audio("Aprendizaje. Tests. Juegos.")
+    #print("La opción Aprendizaje es donde podrás aprender todo con respecto a la Estructura de un computador. La opción Tests es donde podrás poner en práctica lo que aprendiste mediante exámenes. Y por último, la tercer opción, es Juegos, donde tambien podrás demostrar lo que aprendiste jugando.")
+    #texto_a_audio("La opción Aprendizaje es donde podrás aprender todo con respecto a la Estructura de un computador. La opción Tests es donde podrás poner en práctica lo que aprendiste mediante exámenes. Y por último, la tercer opción, es Juegos, donde tambien podrás demostrar lo que aprendiste jugando.")
     print("¿Qué opción eliges?")
     texto_a_audio("¿Qué opción eliges?")
     time.sleep(0.5)
@@ -549,6 +549,11 @@ if __name__ == "__main__":
                     elif respuesta == "examen":
                         print("Tu respuesta " + respuesta)
 
+                        #ESTOY MAS CANSADO JEFE
+                        def validar_respuesta(respuesta, respuesta_correcta):
+                            respuesta = respuesta[:len(respuesta_correcta)]
+                            return respuesta == respuesta_correcta
+                        
                         #PREGUNTAS EXTRAS AÑADIDAS POR EL GRUPO 1 TOY CANSAO JEFE
                         def realizar_examen():
                             print("Escogiste: Examen - Estructura de computadores")
@@ -573,13 +578,15 @@ if __name__ == "__main__":
                                 texto_a_audio("¿Cuál es tu respuesta?")
                                 respuesta = enviar_voz()
 
-                                if respuesta == pregunta_info['respuesta_correcta']:
+                                respuesta_correcta = pregunta_info['respuesta_correcta']
+
+                                if validar_respuesta(respuesta, respuesta_correcta):
                                     print("¡Respuesta correcta!")
                                     texto_a_audio("¡Respuesta correcta!")
                                     puntaje += 1
                                 else:
                                     print("Respuesta incorrecta.")
-                                    print('La opción correcta es: ' + pregunta_info['respuesta_correcta'])
+                                    print(f'La opción correcta es: {pregunta_info["respuesta_correcta"]}')
                                     texto_a_audio("Respuesta incorrecta.")
                             
                             print(f"Tu puntaje en el examen es: {puntaje} de {len(examen)} preguntas.")
