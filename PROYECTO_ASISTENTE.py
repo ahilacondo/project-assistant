@@ -15,7 +15,7 @@ def texto_a_audio(comando):
     palabra.runAndWait()
 
 #CAPTURA AUDIO DESDE EL MICROFONO Y ANALIZA POSIBLES ERRORES
-def capturar_voz(reconocer, microfono, tiempo_ruido = 1.0):
+def capturar_voz(reconocer, microfono, tiempo_ruido = 3.0):
     if not isinstance(reconocer, sr.Recognizer):
         raise TypeError("'reconocer' no es de la instacia 'Recognizer'")
 
@@ -24,6 +24,7 @@ def capturar_voz(reconocer, microfono, tiempo_ruido = 1.0):
     
     with microfono as fuente:
         reconocer.adjust_for_ambient_noise(fuente, duration = tiempo_ruido)
+        print("iniciando reconcimiento")
         audio = reconocer.listen(fuente)
 
     respuesta = {
@@ -38,6 +39,7 @@ def capturar_voz(reconocer, microfono, tiempo_ruido = 1.0):
         respuesta["error"] = "API no disponible"
     except sr.UnknownValueError:
         respuesta["error"] = "Habla inteligible"
+    print("termino reconocimiento")
     return respuesta
 
 #CONVIERTE A UNA CADENA DE TEXTO EN MINUSCULA EL AUDIO ENVIADO POR MICROFONO
@@ -97,15 +99,15 @@ if __name__ == "__main__":
     texto_a_audio(datos['bienvenida'])
     print("Di tu nombre: ")
     #LA FUNCION 'enviar_voz' RETORNA UNA CADENA DE TEXTO DEL AUDIO ENVIADO POR VOZ DEL USUARIO
-    #nombre = enviar_voz()
-    #print("Hola {}. Mucho gusto.".format(nombre))
-    #texto_a_audio("Hola {}. Mucho gusto.".format(nombre))
-    #print("{} Ahora voy a explicarte sobre las opciones que tiene este programa. Tienes 3 opciones para escoger.".format(nombre))
-    #texto_a_audio("{} Ahora voy a explicarte sobre las opciones que tiene este programa. Tienes 3 opciones para escoger.".format(nombre))
-    #print("\n 1) Aprendizaje\n 2) Tests\n 3) Juegos\n")
-    #texto_a_audio("Aprendizaje. Tests. Juegos.")
-    #print("La opción Aprendizaje es donde podrás aprender todo con respecto a la Estructura de un computador. La opción Tests es donde podrás poner en práctica lo que aprendiste mediante exámenes. Y por último, la tercer opción, es Juegos, donde tambien podrás demostrar lo que aprendiste jugando.")
-    #texto_a_audio("La opción Aprendizaje es donde podrás aprender todo con respecto a la Estructura de un computador. La opción Tests es donde podrás poner en práctica lo que aprendiste mediante exámenes. Y por último, la tercer opción, es Juegos, donde tambien podrás demostrar lo que aprendiste jugando.")
+    nombre = enviar_voz()
+    print("Hola {}. Mucho gusto.".format(nombre))
+    texto_a_audio("Hola {}. Mucho gusto.".format(nombre))
+    print("{} Ahora voy a explicarte sobre las opciones que tiene este programa. Tienes 3 opciones para escoger.".format(nombre))
+    texto_a_audio("{} Ahora voy a explicarte sobre las opciones que tiene este programa. Tienes 3 opciones para escoger.".format(nombre))
+    print("\n 1) Aprendizaje\n 2) Tests\n 3) Juegos\n")
+    texto_a_audio("Aprendizaje. Tests. Juegos.")
+    print("La opción Aprendizaje es donde podrás aprender todo con respecto a la Estructura de un computador. La opción Tests es donde podrás poner en práctica lo que aprendiste mediante exámenes. Y por último, la tercer opción, es Juegos, donde tambien podrás demostrar lo que aprendiste jugando.")
+    texto_a_audio("La opción Aprendizaje es donde podrás aprender todo con respecto a la Estructura de un computador. La opción Tests es donde podrás poner en práctica lo que aprendiste mediante exámenes. Y por último, la tercer opción, es Juegos, donde tambien podrás demostrar lo que aprendiste jugando.")
     print("¿Qué opción eliges?")
     texto_a_audio("¿Qué opción eliges?")
     time.sleep(0.5)
@@ -159,6 +161,18 @@ if __name__ == "__main__":
                 main()
                 
             texto_a_audio(datos['aprendizaje'])
+
+            try:
+                img = Image.open("modelo.jpg")
+            except:
+                print("No se pudo cargar la imagen.")
+                sys.exit(1)
+            
+            size = (600,400)
+            img2 = img.resize(size)
+            img2.show()
+
+            texto_a_audio(datos['arquitectura clasica de una computador'])
             
             try:
                 img = Image.open("arquitectura.PNG")
@@ -200,34 +214,7 @@ if __name__ == "__main__":
 
                         texto_a_audio(datos['unidad central de proceso'])
 
-                        print("¿Quieres seguir aprendiendo?")
-                        texto_a_audio("¿Quieres seguir aprendiendo?")
-                        time.sleep(0.5)
-                        print("Responde con:\n1) Está bien\n2) No gracias")
-
-                        respuesta = enviar_voz()
-                        print("Tu respuesta " + respuesta)
-
-                        #COMPRUEbA QUE EL MENSAJE ENVIADO SEA VALIDO
-                        if respuesta == "está bien": 
-                            #ELEGIMOS CON QUÉ OPCIÓN SEGUIR
-                            print("Elige la opcion que desees aprender: ")
-                            texto_a_audio("Elige la opcion que desees aprender: ")
-                            print("\n1) Unidad central de proceso CPU\n2) Memoria\n3) Entrada / Salida\n4) Sistemas de interconexion: Buses\n5) Periféricos\n")
-                            break
-                        elif respuesta == "no gracias":
-                            print("Oh. es una lástima. En ese caso nos veremos en otra ocasión ")
-                            texto_a_audio("Oh. es una lástima. En ese caso nos veremos en otra ocasión")
-                            
-                            time.sleep(0.5)
-                            print("Espero que hayas aprendido mucho sobre este tema. Hasta luego.")
-                            texto_a_audio("Espero que hayas aprendido mucho sobre este tema. Hasta luego.")
-                            exit(0)
-                        #SI EL MENSAJE ENVIADO NO ES ERRONEO LE PIDE AL USUARIO SELECCIONAR UNA OPCION VALIDA
-                        else:
-                            print(nombre + " creo que no has respondido con alguna de las instrucciones indicadas anteriormente")
-                            texto_a_audio(nombre + " creo que no has respondido con alguna de las instrucciones indicadas anteriormente")
-                            print("Responde con:\n1) Esta bien.\n2) No gracias")
+                        manejar_continuacion()
 
                     elif respuesta == "memoria":
 
@@ -243,35 +230,7 @@ if __name__ == "__main__":
 
                         texto_a_audio(datos['memoria'])
                 
-                        print("¿Quieres seguir aprendiendo?")
-                        texto_a_audio("¿Quieres seguir aprendiendo?")
-                        time.sleep(0.5)
-                        print("Responde con:\n1) Está bien\n2) No gracias")
-
-                        respuesta = enviar_voz()
-                        print("Tu respuesta " + respuesta)
-
-
-                        #COMPRUEbA QUE EL MENSAJE ENVIADO SEA VALIDO
-                        if respuesta == "está bien": 
-                            #ELEGIMOS CON QUÉ OPCIÓN SEGUIR
-                            print("Elige la opcion que desees aprender: ")
-                            texto_a_audio("Elige la opcion que desees aprender: ")
-                            print("\n1) Unidad central de proceso CPU\n2) Memoria\n3) Entrada / Salida\n4) Sistemas de interconexion: Buses\n5) Periféricos\n")
-                            break
-                        elif respuesta == "no gracias":
-                            print("Oh. es una lástima. En ese caso nos veremos en otra ocasión ")
-                            texto_a_audio("Oh. es una lástima. En ese caso nos veremos en otra ocasión")
-                            
-                            time.sleep(0.5)
-                            print("Espero que hayas aprendido mucho sobre este tema. Hasta luego.")
-                            texto_a_audio("Espero que hayas aprendido mucho sobre este tema. Hasta luego.")
-                            exit(0)
-                        #SI EL MENSAJE ENVIADO NO ES ERRONEO LE PIDE AL USUARIO SELECCIONAR UNA OPCION VALIDA
-                        else:
-                            print(nombre + " creo que no has respondido con alguna de las instrucciones indicadas anteriormente")
-                            texto_a_audio(nombre + " creo que no has respondido con alguna de las instrucciones indicadas anteriormente")
-                            print("Responde con:\n1) Esta bien.\n2) No gracias")
+                        manejar_continuacion()
 
                     elif respuesta == "entrada salida":
 
@@ -287,35 +246,7 @@ if __name__ == "__main__":
 
                         texto_a_audio(datos['entrada salida'])
 
-                        print("¿Quieres seguir aprendiendo?")
-                        texto_a_audio("¿Quieres seguir aprendiendo?")
-                        time.sleep(0.5)
-                        print("Responde con:\n1) Está bien\n2) No gracias")
-
-                        respuesta = enviar_voz()
-                        print("Tu respuesta " + respuesta)
-
-
-                        #COMPRUEbA QUE EL MENSAJE ENVIADO SEA VALIDO
-                        if respuesta == "está bien": 
-                            #ELEGIMOS CON QUÉ OPCIÓN SEGUIR
-                            print("Elige la opcion que desees aprender: ")
-                            texto_a_audio("Elige la opcion que desees aprender: ")
-                            print("\n1) Unidad central de proceso CPU\n2) Memoria\n3) Entrada / Salida\n4) Sistemas de interconexion: Buses\n5) Periféricos\n")
-                            break
-                        elif respuesta == "no gracias":
-                            print("Oh. es una lástima. En ese caso nos veremos en otra ocasión.")
-                            texto_a_audio("Oh. es una lástima. En ese caso nos veremos en otra ocasión.")
-                            
-                            time.sleep(0.5)
-                            print("Espero que hayas aprendido mucho sobre este tema. Hasta luego.")
-                            texto_a_audio("Espero que hayas aprendido mucho sobre este tema. Hasta luego.")
-                            exit(0)
-                        #SI EL MENSAJE ENVIADO NO ES ERRONEO LE PIDE AL USUARIO SELECCIONAR UNA OPCION VALIDA
-                        else:
-                            print(nombre + " creo que no has respondido con alguna de las instrucciones indicadas anteriormente")
-                            texto_a_audio(nombre + " creo que no has respondido con alguna de las instrucciones indicadas anteriormente")
-                            print("Responde con:\n1) Esta bien.\n2) No gracias")
+                        manejar_continuacion()
                     
                     elif respuesta == "sistemas de interconexión buses":
 
@@ -333,35 +264,7 @@ if __name__ == "__main__":
                         
                         print("\n1) Bus de datos\n2) Bus de direcciones\n3) Bus de control\n4) Bus de alimentación")
                         
-                        print("¿Quieres seguir aprendiendo?")
-                        texto_a_audio("¿Quieres seguir aprendiendo?")
-                        time.sleep(0.5)
-                        print("Responde con:\n1) Está bien\n2) No gracias")
-
-                        respuesta = enviar_voz()
-                        print("Tu respuesta " + respuesta)
-
-
-                        #COMPRUEbA QUE EL MENSAJE ENVIADO SEA VALIDO
-                        if respuesta == "está bien": 
-                            #ELEGIMOS CON QUÉ OPCIÓN SEGUIR
-                            print("Elige la opcion que desees aprender: ")
-                            texto_a_audio("Elige la opcion que desees aprender: ")
-                            print("\n1) Unidad central de proceso CPU\n2) Memoria\n3) Entrada / Salida\n4) Sistemas de interconexion: Buses\n5) Periféricos\n")
-                            break
-                        elif respuesta == "no gracias":
-                            print("Oh. es una lástima. En ese caso nos veremos en otra ocasión.")
-                            texto_a_audio("Oh. es una lástima. En ese caso nos veremos en otra ocasión.")
-                            
-                            time.sleep(0.5)
-                            print("Espero que hayas aprendido mucho sobre este tema. Hasta luego.")
-                            texto_a_audio("Espero que hayas aprendido mucho sobre este tema. Hasta luego.")
-                            exit(0)
-                        #SI EL MENSAJE ENVIADO NO ES ERRONEO LE PIDE AL USUARIO SELECCIONAR UNA OPCION VALIDA
-                        else:
-                            print(nombre + " creo que no has respondido con alguna de las instrucciones indicadas anteriormente")
-                            texto_a_audio(nombre + " creo que no has respondido con alguna de las instrucciones indicadas anteriormente")
-                            print("Responde con:\n1) Esta bien.\n2) No gracias")
+                        manejar_continuacion()
 
                     elif respuesta == "periféricos":
 
@@ -377,35 +280,7 @@ if __name__ == "__main__":
 
                         texto_a_audio(datos['perifericos'])
 
-                        print("¿Quieres seguir aprendiendo?")
-                        texto_a_audio("¿Quieres seguir aprendiendo?")
-                        time.sleep(0.5)
-                        print("Responde con:\n1) Está bien\n2) No gracias")
-
-                        respuesta = enviar_voz()
-                        print("Tu respuesta " + respuesta)
-
-
-                        #COMPRUEbA QUE EL MENSAJE ENVIADO SEA VALIDO
-                        if respuesta == "está bien": 
-                            #ELEGIMOS CON QUÉ OPCIÓN SEGUIR
-                            print("Elige la opcion que desees aprender: ")
-                            texto_a_audio("Elige la opcion que desees aprender: ")
-                            print("\n1) Unidad central de proceso CPU\n2) Memoria\n3) Entrada / Salida\n4) Sistemas de interconexion: Buses\n5) Periféricos\n")
-                            break
-                        elif respuesta == "no gracias":
-                            print("Oh. es una lástima. En ese caso nos veremos en otra ocasión.")
-                            texto_a_audio("Oh. es una lástima. En ese caso nos veremos en otra ocasión.")
-                            
-                            time.sleep(0.5)
-                            print("Espero que hayas aprendido mucho sobre este tema. Hasta luego.")
-                            texto_a_audio("Espero que hayas aprendido mucho sobre este tema. Hasta luego.")
-                            exit(0)
-                        #SI EL MENSAJE ENVIADO NO ES ERRONEO LE PIDE AL USUARIO SELECCIONAR UNA OPCION VALIDA
-                        else:
-                            print(nombre + " creo que no has respondido con alguna de las instrucciones indicadas anteriormente")
-                            texto_a_audio(nombre + " creo que no has respondido con alguna de las instrucciones indicadas anteriormente")
-                            print("Responde con:\n1) Esta bien.\n2) No gracias")
+                        manejar_continuacion()
 
                     elif respuesta != "unidad central de proceso" or respuesta != "memoria" or respuesta != "entrada salida" or respuesta != "sistemas de interconexion buses" or respuesta != "perifericos":
                         print("Perdona, pero por el momento no tengo informacion sobre {}. Prueba con otra OPCION".format(respuesta))
@@ -422,11 +297,11 @@ if __name__ == "__main__":
             print("Elegiste la opción TEST.")
             texto_a_audio("Elegiste la opción TEST.")
             print("En esta opción tienes para elegir en dar una prueba de entrada sobre pensamiento computacional, o dar un examen sobre Estructura de Computadores.")
-            #texto_a_audio("En esta opción tienes para elegir en dar una prueba de entrada sobre pensamiento computacional, o dar un examen sobre Estructura de Computadores.")
-            #print("¿Cuál eliges?")
-            #texto_a_audio("¿Cuál eliges?")
-            #print("\n 1) Prueba de entrada - Pensamiento Computacional\n 2) Examen - Estructura de computadores\n")
-            #texto_a_audio("¿Prueba de entrada Pensamiento Computacional? o ¿Examen - Estructura de computadores?")
+            texto_a_audio("En esta opción tienes para elegir en dar una prueba de entrada sobre pensamiento computacional, o dar un examen sobre Estructura de Computadores.")
+            print("¿Cuál eliges?")
+            texto_a_audio("¿Cuál eliges?")
+            print("\n 1) Prueba de entrada - Pensamiento Computacional\n 2) Examen - Estructura de computadores\n")
+            texto_a_audio("¿Prueba de entrada Pensamiento Computacional? o ¿Examen - Estructura de computadores?")
             
             while(not salir):
                 print("¿Por cual deseas empezar?")
@@ -517,34 +392,7 @@ if __name__ == "__main__":
                         respuesta_correcta ="Una secuencia de pasos para resolver un problema"
                         escribir_respuesta(pregunta, alternativas, respuesta_correcta)       
 
-                        print("¿Quieres seguir aprendiendo?")
-                        texto_a_audio("¿Quieres seguir aprendiendo?")
-                        time.sleep(0.5)
-                        print("Responde con:\n1) Está bien\n2) No gracias")
-
-                        respuesta = enviar_voz()
-                        print("Tu respuesta " + respuesta)
-
-                        #COMPRUEbA QUE EL MENSAJE ENVIADO SEA VALIDO
-                        if respuesta == "está bien": 
-                            #ELEGIMOS CON QUÉ OPCIÓN SEGUIR
-                            print("Elige la opcion que desees aprender: ")
-                            texto_a_audio("Elige la opcion que desees aprender: ")
-                            print("\n1) Aprendizaje\n2) Test\n3) Juegos\n")
-                            break
-                        elif respuesta == "no gracias":
-                            print("Oh. es una lástima. En ese caso nos veremos en otra ocasión.")
-                            texto_a_audio("Oh. es una lástima. En ese caso nos veremos en otra ocasión.")
-                            
-                            time.sleep(0.5)
-                            print("Espero que hayas aprendido mucho sobre este tema. Hasta luego.")
-                            texto_a_audio("Espero que hayas aprendido mucho sobre este tema. Hasta luego.")
-                            exit(0)
-                        #SI EL MENSAJE ENVIADO NO ES ERRONEO LE PIDE AL USUARIO SELECCIONAR UNA OPCION VALIDA
-                        else:
-                            print(nombre + " creo que no has respondido con alguna de las instrucciones indicadas anteriormente")
-                            texto_a_audio(nombre + " creo que no has respondido con alguna de las instrucciones indicadas anteriormente")
-                            print("Responde con:\n1) Esta bien.\n2) No gracias")  
+                        manejar_continuacion() 
 
                     elif respuesta == "examen":
                         print("Tu respuesta " + respuesta)
@@ -608,54 +456,67 @@ if __name__ == "__main__":
                     self.root = root
                     self.root.title("JUEGO: ESTRUCTURA DE UN COMPUTADOR")
 
-                    self.question_label = tk.Label(root, text="¿Qué componente almacena datos de manera temporal en la CPU?")
+                    self.questions = [
+                        {
+                            "question": "Qué unidad en una computadora controla el flujo de datos y regula el funcionamiento del sistema?",
+                            "options": ["a) Memoria", "b) CPU", "c) Sistema de interconexión: Buses"],
+                            "correct_answer": 1,
+                        },
+                        # más chamba jefe o sea si quiere que haya más "juegos"
+                    ]
+
+                    self.current_question = 0
+
+                    self.question_label = tk.Label(root, text="")
                     self.question_label.pack()
 
                     self.image_frame = tk.Frame(root)
                     self.image_frame.pack()
 
                     self.image_labels = []
-                    for _ in range(4):
+                    for _ in range(3):
                         image_label = tk.Label(self.image_frame, image=None)
                         image_label.pack(side=tk.LEFT, padx=10)
                         image_label.bind("<Button-1>", self.check_answer)
                         self.image_labels.append(image_label)
 
-                    self.correct_answer = 0  # Índice de la respuesta correcta
                     self.load_question()
 
                 def load_question(self):
-                    # Cargar la pregunta y las imágenes aquí
-                    question = "¿Qué componente almacena datos de manera temporal en la CPU?"
-                    options = ["RAM", "GPU", "HDD", "CPU"]
-                    
-                    self.question_label.config(text=question)
-                    self.correct_answer = 0  # Respuesta correcta en la posición 0 (RAM)
+                    if self.current_question < len(self.questions):
+                        question_data = self.questions[self.current_question]
+                        question = question_data["question"]
+                        options = question_data["options"]
+                        self.correct_answer = question_data["correct_answer"]
 
-                    for i in range(4):
-                        image_path = f"option_{i+1}.png"
-                        image = Image.open(image_path)
-                        image = image.resize((200, 200))
-                        photo = ImageTk.PhotoImage(image)
-                        self.image_labels[i].config(image=photo)
-                        self.image_labels[i].image = photo
+                        self.question_label.config(text=question)
+
+                        for i in range(3):
+                            image_path = f"option_{i+1}.png"  
+                            image = Image.open(image_path)
+                            image = image.resize((200, 200))
+                            photo = ImageTk.PhotoImage(image)
+                            self.image_labels[i].config(image=photo)
+                            self.image_labels[i].image = photo
+                    else:
+                        self.question_label.config(text="¡Juego terminado!")
 
                 def check_answer(self, event):
                     clicked_label = event.widget
                     clicked_index = self.image_labels.index(clicked_label)
-                    
+
                     if clicked_index == self.correct_answer:
                         print("¡Respuesta correcta!")
-                        texto_a_audio("Respuesta correcta.")
                     else:
                         print("Respuesta incorrecta.")
-                        texto_a_audio("Respuesta incorrecta.")
+                    self.current_question += 1
                     self.load_question()
 
             if __name__ == "__main__":
                 root = tk.Tk()
                 app = ComputerStructureQuizApp(root)
                 root.mainloop()
+                manejar_continuacion()
                     
         #SI EL MENSAJE ENVIADO NO ES ERRONEO LE PIDE AL USUARIO SELECCIONAR UNA OPCION VALIDA
         else:

@@ -15,8 +15,9 @@
                                   "La UNIDAD DE CONTROL UC, se encarga de leer de la memoria las instrucciones que se debe ejecutar y de secuenciar el acceso a los datos y las operaciones a realizar por la unidad de proceso. Se encarga de acceder a memoria habilitando un camino de datos para que las instrucciones y los datos lleguen a la CPU.",
                                   "La Unidad Aritmetico Logica ALU, es la parte de la CPU encargada de realizar las transformaciones de los datos. La ALU consta de una serie de modulos que permiten realizar operaciones aritmeticas y logicas.",
                                   "Los registros internos son pequeñas memorias de alta velocidad dentro de un computador que se utilizan para almacenar datos temporales y realizar operaciones rapidas."],
-    "memoria": ["En la memoria se almacenaran el programa y los datos que, provenientes de un dispositivo de Entrada Salida o dispositivos de almacenamiento secundario, va a ejecutar la CPU. La matriz de memoria está organizada en palabras, cada una de las cuales tiene asignada una direccion que indica su posicion en la matriz.",
-                "La memoria en un computador es un dispositivo electrónico que almacena temporalmente programas y datos que están siendo utilizados por el procesador, para acceder a ellos más rapidamente."],
+    "memoria": ["Las instrucciones y los datos en la memoria se almacenan en formato binario, no en formato ASCII o decimal.",
+                "El propósito del diseño jerárquico de memoria es minimizar la latencia y optimizar el rendimiento al organizar diferentes niveles de memoria, ubicando la más rápida cerca de la CPU y dejando las más lentas en capas más externas para lograr una mayor eficiencia.",
+                "La volatilidad de una memoria tiene el propósito principal de preservar datos e instrucciones después de un corte de energía, no para acelerar el acceso a la memoria. En cuanto a la relación entre el tiempo de acceso y el precio por bit en las tecnologías de almacenamiento, son inversamente proporcionales, lo que significa que un tiempo de acceso rápido suele tener un costo más alto."],
     "entrada salida": ["Un computador tiene una gran cantidad de dispositivos de entrada y salida. Desde un teclado hasta un monitor de video, pasando por un disco duro, todos son dispositivos que la CPU necesita para obtener datos o para almacenar o mostrar resultados.",
                        "El principal problema de estos dispositivos perifericos es su gran variedad. Muchos de ellos comunican a un operador humano con el computador y otros sirven de conexion con otros computadores.",
                        "El objetivo de cada transferencia es llevar los datos desde el periferico a una zona concreta de la memoria y viceversa."],  
@@ -48,7 +49,7 @@
             "respuesta_correcta": "c"
         },
         {
-            "pregunta": "Cual es la tension electrica asociada a un valor logico '1' en un sistema binario?",
+            "pregunta": "Cual es la tension electrica asociada a un valor logico 1 en un sistema binario?",
             "opciones": [
                 "a) 3.3 voltios",
                 "b) 0 voltios",
