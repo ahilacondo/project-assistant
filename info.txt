@@ -1,0 +1,17 @@
+CAPITULO 1: INTRODUCCIÓN A LA ESTRUCTURA DE COMPUTADORES
+    ------------------ (preguntas1) -------------------
+    1. Introducción    
+    ------------------ (preguntas2) -------------------
+    2. Arquitectura clásica de un computador: Modelo Von Neumann 
+        2.1 Unidad central de proceso	
+        2.2 Memoria	
+        2.3 Entrada / Salida	
+        2.4 Sistemas de interconexión: Buses	
+        2.5 Periféricos
+
+___________________________________________________________________
+
+JUEGOS
+pregunta: ¿Qué unidad en una computadora controla el flujo de datos y regula el funcionamiento del sistema?
+opciones: 1) memoria 2) CPU 3) Buses
+respuesta: 2

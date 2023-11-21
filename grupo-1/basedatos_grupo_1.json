@@ -1,0 +1,62 @@
+{
+    "aprendizaje":{
+        "seccion1": [
+            "Un computador es un sistema que procesa información de forma binaria utilizando niveles de tensión eléctrica. El procesador es el componente central y se comunica con dispositivos periféricos.",
+            "El análisis de sistemas complejos, como computadoras, se basa en una estructura jerárquica que organiza múltiples niveles de componentes interdependientes.",
+            "La pérdida de energía eléctrica puede resultar en la pérdida de información no almacenada en dispositivos de almacenamiento no volátil en un sistema jerárquico que consta de niveles de componentes, electrónica, digital, RTL y PMS."
+        ],
+
+        "seccion2":{
+            "unidad_central_de_proceso": [
+                "La CPU controla el funcionamiento de la computadora, procesa datos y consta de la Unidad de Control (UC), la Unidad Aritmético Lógica (ALU) y registros internos.",
+                "La UC lee instrucciones de memoria y gestiona el acceso a datos.",
+                "La ALU realiza operaciones aritméticas y lógicas.",
+                "Los registros internos almacenan datos temporales para operaciones rápidas."
+            ],
+            "memoria": [
+                "La memoria almacena datos e instrucciones en formato binario.",
+                "El diseño jerárquico de memoria minimiza la latencia y mejora el rendimiento.",
+                "La volatilidad de la memoria preserva datos tras cortes de energía.",
+                "El tiempo de acceso y el precio por bit son inversamente proporcionales en tecnologías de almacenamiento."
+            ],
+            "entrada_salida": [
+                "Los dispositivos de entrada/salida (E/S) incluyen teclados, monitores y discos duros.",
+                "El objetivo de las transferencias E/S es mover datos entre los dispositivos periféricos y la memoria."
+            ],
+            "sistemas_de_interconexión_buses": [
+                "Los buses son enlaces de comunicación compartidos que usan cables para conectar subsistemas.",
+                "Las señales de buses transmiten unos y ceros binarios.",
+                "Los buses de datos transfieren datos, los buses de direcciones indican ubicaciones de datos y los buses de control gestionan acceso y arbitraje.",
+                "Los buses de alimentación suministran energía a componentes internos."
+            ],
+            "perifericos": [
+                "Los periféricos son dispositivos necesarios para suministrar datos a la computadora o visualizar resultados.",
+                "Los periféricos de entrada incluyen interruptores, teclados, ratones y escáneres."
+            ]
+        }
+    },
+    "imagenes":{
+        "seccion1":[
+            "img/modelo-vom-neumann.jpg"
+        ],
+        
+        "seccion2":{
+            "unidad_central_de_proceso": [
+                "img/unidad-central-procesos.png"
+            ],
+            "memoria": [
+                "img/memoria.png"
+            ],
+            "entrada_salida": [
+                "img/entrada-salida.png"
+            ],
+            "sistemas_de_interconexión_buses": [
+                "img/bus-de-datos.jpg"
+            ],
+            "perifericos": [
+                "img/perifericos.png"
+            ]
+        }
+    }
+}
+
