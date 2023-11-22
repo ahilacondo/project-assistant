@@ -165,16 +165,7 @@ if __name__ == "__main__":
                 
             texto_a_audio(datos['aprendizaje'])
 
-            try:
-                img = Image.open("img/modelo.jpg")
-            except:
-                print("No se pudo cargar la imagen.")
-                sys.exit(1)
             
-            size = (600,400)
-            img2 = img.resize(size)
-            img2.show()
-
             texto_a_audio(datos['arquitectura clasica de una computador'])
             
             try:
